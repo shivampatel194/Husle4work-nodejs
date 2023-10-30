@@ -1,7 +1,8 @@
 const userModel = require("../models/user");
 const bcrypt = require("bcrypt")
 const jwt = require("jsonwebtoken");
-const SECKRET_KEY = "Hustle$work";
+const userData = require("../models/userData");
+const SECKRET_KEY = "Hustle4work";
 
 
 
@@ -12,6 +13,8 @@ const signup = async (req,res)=>{
     try {
         
         const existingUser = await userModel.findOne({email : email});
+        
+        
 
         if(existingUser){
             return res.status(400).json({message : "User already axist!"});

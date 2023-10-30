@@ -1,40 +1,40 @@
 const mongoose = require("mongoose");
 
-const UserDataSchema = new mongoose.Schema({
+const jobSchema = new mongoose.Schema({
 
-    username : {
+    title : {
         type : String,
         require : true
     },
     
-    email : {
+    description : {
         type : String,
         require : true
     },
 
-    phoneNumber : {
+    location : {
         type : String,
         require : true
     },
-    address : {
+    requirements : {
         type : String,
         require : true
     },
-    qualification : {
+    payRate : {
         type : String,
     },
-    skills : {
-        type : [String]
+    jobType : {
+        type : String
     },
-    experience : {
-        type : [String]
+    uploadDate : {
+        type : String
     },
 
     userID : {
         type : mongoose.Schema.Types.ObjectId,
-        ref : "user",
+        ref : "job",
         require : true
     }
 }, {timestamps : true});
 
-module.exports = mongoose.model("UserData", UserDataSchema);
+module.exports = mongoose.model("job", jobSchema);

@@ -3,17 +3,13 @@ const express = require("express");
 const userRouter = require("../routes/userRoutes");
 const app = express();
 const mongoose = require("mongoose");
+const userDataRoutes = require("../routes/userDataRoutes");
 app.use(express.json());
 
 app.use("/users", userRouter);
+app.use("/userData" , userDataRoutes);
 
-app.get("/" , (req,res)=>{
-    res.send("hello");
-});
 
-app.get("/quotes", (req,res)=>{
- res.send("dont give up on your dreams");
-});
 
 
 
