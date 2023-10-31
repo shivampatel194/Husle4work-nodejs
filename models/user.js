@@ -22,6 +22,10 @@ const UserSchema = new mongoose.Schema({
     address : {
         type : String,
         require : true
+    },
+    isEmployer : {
+        type : Boolean,
+        default : false
     }
 }, {timestamps : true});
 

@@ -4,10 +4,13 @@ const userRouter = require("../routes/userRoutes");
 const app = express();
 const mongoose = require("mongoose");
 const userDataRoutes = require("../routes/userDataRoutes");
+const jobRouter = require("../routes/jobRoutes")
+
 app.use(express.json());
 
 app.use("/users", userRouter);
 app.use("/userData" , userDataRoutes);
+app.use("/jobs", jobRouter);
 
 
 

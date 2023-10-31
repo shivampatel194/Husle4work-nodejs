@@ -13,7 +13,7 @@ const createJob = async (req,res)=> {
         requirements : requirements,
         payRate : payRate,
         jobType : jobType,
-        uploadDate : updatedData
+        uploadDate : uploadDate
     });
 
     try {

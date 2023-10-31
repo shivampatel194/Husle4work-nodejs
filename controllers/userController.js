@@ -8,7 +8,7 @@ const SECKRET_KEY = "Hustle4work";
 
 const signup = async (req,res)=>{
 
-    const {username, email, password, address, phonenumber} = req.body;
+    const {username, email, password, address, phonenumber, isEmployer} = req.body;
 
     try {
         
@@ -27,7 +27,8 @@ const signup = async (req,res)=>{
             password : hashedPassword,
             username : username,
             phoneNumber : phonenumber,
-            address : address
+            address : address,
+            isEmployer : isEmployer
         });
 
         const token = jwt.sign({email : result.email, id : result._id}, SECKRET_KEY);
