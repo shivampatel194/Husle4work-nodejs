@@ -4,6 +4,7 @@
   "description": "job hiring application",
   "main": "index.js",
   "scripts": {
+    "prestart": "next build",
     "start": "node index.js"
   },
   "keywords": [],
