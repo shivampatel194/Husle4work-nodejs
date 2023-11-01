@@ -13,8 +13,8 @@ mongoose
     "mongodb+srv://patelshivam21194:Patel%408140297844@husle4work.onxfqqr.mongodb.net/"
   )
   .then(() => {
-    app.listen(5000, () => {
-      console.log("server stared on 5000 port");
+    app.listen(process.env.PORT || 3000, () => {
+      console.log("server stared on 3000 port");
     });
   })
   .catch((error) => {
